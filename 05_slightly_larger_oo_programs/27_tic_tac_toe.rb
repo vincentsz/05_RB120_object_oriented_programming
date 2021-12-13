@@ -1,4 +1,3 @@
-require "pry"
 class Board
   INITIAL_MARK = ' '
   DEFAULT_MARKER = 'X'
