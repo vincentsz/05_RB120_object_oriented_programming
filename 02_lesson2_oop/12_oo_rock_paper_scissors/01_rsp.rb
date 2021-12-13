@@ -5,6 +5,9 @@ class Score
     @value = 0
   end
 
+  def add_point
+    self.value += 1
+  end
 end
 
 class Player
@@ -14,11 +17,6 @@ class Player
     set_name
     @score = Score.new
   end
-
-  def add_score
-    score.value += 1
-  end
-
 end
 
 class Choice
@@ -119,10 +117,10 @@ class RPSGame
 
   def display_winner
     if human.choice < computer.choice
-      computer.add_score
+      computer.score.add_point
       puts "#{computer.name} wins!"
     elsif computer.choice < human.choice
-      human.add_score
+      human.score.add_point
       puts "#{human.name} won!"
     else
       puts "It's a tie!"

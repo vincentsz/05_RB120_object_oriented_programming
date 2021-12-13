@@ -11,7 +11,7 @@ class Player
     @temp_moves = []
   end
 
-  def add_score
+  def add_point
     self.score += 1
   end
 
@@ -208,7 +208,7 @@ class RPSGame
   end
 
   def handle_score
-    winner.add_score unless tie?
+    winner.add_point unless tie?
   end
 
   def display_score
