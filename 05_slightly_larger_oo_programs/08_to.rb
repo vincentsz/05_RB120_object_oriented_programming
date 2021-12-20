@@ -1,4 +1,3 @@
-require "pry"
 module Displayable
   def display_welcome
     puts "Welcome to #{@game}!"
@@ -437,7 +436,6 @@ class Game
     handle_screen(4)
     @player.stay
   end
-
 
   def computer_turn
     @computer.show_all
