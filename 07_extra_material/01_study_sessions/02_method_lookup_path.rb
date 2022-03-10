@@ -12,5 +12,6 @@ include Foo1
   end
 end
 
+
 p Bar::Fooey.ancestors
-# Fooey > Foo2 > Bar > Foo1 > Object > Kernel > BasicObject
+#[Bar::Fooey, Foo2, Object, Kernel, BasicObject]
