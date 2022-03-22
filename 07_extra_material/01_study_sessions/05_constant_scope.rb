@@ -4,15 +4,22 @@ module Describable
   end
 end
 
-class Shape
-  include Describable
+class Page
+  PAGE_SIDES = 6
+  class Shape
+    include Describable
 
-  def self.sides
-    self::SIDES
-  end
+    def self.sides
+      self::SIDES
+    end
 
-  def sides
-    self.class::SIDES
+    def find_page_sides
+      PAGE_SIDES
+    end
+
+    def sides
+      self.class::SIDES
+    end
   end
 end
 
@@ -24,4 +31,5 @@ class Square < Quadrilateral ; end
 
 p Square.sides # => 
 p Square.new.sides
-p Square.new.describe_shape
+p Square.new.find_page_sides
+# p Square.new.describe_shape
